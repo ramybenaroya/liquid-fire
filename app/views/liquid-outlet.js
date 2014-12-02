@@ -144,7 +144,7 @@ export default Ember.ContainerView.extend({
       var target = {};
       target[dimension] = [
         after['literal'+capitalize(dimension)],
-        before['literal'+capitalize(dimension)],
+        before['literal'+capitalize(dimension)]
       ];
       return animate(this, target, {
         duration: this._durationFor(before[dimension], after[dimension]),
@@ -173,7 +173,7 @@ export default Ember.ContainerView.extend({
 
     this._scaling = Promise.all([
       this._adaptDimension('width', this._cachedSize, newSize),
-      this._adaptDimension('height', this._cachedSize, newSize),
+      this._adaptDimension('height', this._cachedSize, newSize)
     ]);
   }
 
